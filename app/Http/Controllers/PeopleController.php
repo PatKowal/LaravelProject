@@ -19,7 +19,7 @@ class PeopleController extends Controller
     public function update(Request $request, People $people)
     {
         $people -> update($request -> all());
-        return response() -> json ($user);
+        return response() -> json (['status' => 200, 'message' => 'Zaktualizowano rekord'], 200);
     }
     public function delete(People $people)
     {
